@@ -2,10 +2,8 @@ import java.util.ArrayList;
 
 public class GestionRecompensas {
 
-    // Porcentaje que se descuenta para el Fondo del Santuario
     private static final double PORCENTAJE_SANTUARIO = 0.10;
 
-    // Suma las recompensas de todas las misiones del caballero (R)
     public double calcularRecompensaAnual(Caballero caballero) {
         if (caballero == null) {
             throw new IllegalArgumentException(
@@ -23,14 +21,12 @@ public class GestionRecompensas {
         return total;
     }
 
-    // Aporte al Fondo del Santuario: R x 0.10
     public double calcularAporteSantuario(double recompensaAnual) {
         validarRecompensa(recompensaAnual);
 
         return recompensaAnual * PORCENTAJE_SANTUARIO;
     }
 
-    // Impuesto del Reino de Atena según el rango de R
     public double calcularImpuesto(double recompensaAnual) {
         validarRecompensa(recompensaAnual);
 
@@ -57,8 +53,7 @@ public class GestionRecompensas {
         return recompensaAnual - aporte - impuesto;
     }
 
-    // Informe con los datos del caballero, sus misiones y los cálculos
-    public String generarInforme(Caballero caballero) {
+        public String generarInforme(Caballero caballero) {
         if (caballero == null) {
             throw new IllegalArgumentException(
                     "Debe seleccionar un caballero."
@@ -80,8 +75,7 @@ public class GestionRecompensas {
         informe = informe + "Constelación: " + caballero.getConstelacion() + "\n";
         informe = informe + "Nivel de poder: " + caballero.getNivelPoder() + "\n\n";
 
-        // Misiones
-        informe = informe + "MISIONES ASIGNADAS\n";
+                informe = informe + "MISIONES ASIGNADAS\n";
         ArrayList<Mision> misiones = caballero.getMisiones();
 
         if (misiones.isEmpty()) {
@@ -96,8 +90,7 @@ public class GestionRecompensas {
             }
         }
 
-        // Resultados económicos
-        informe = informe + "\nRESULTADOS ECONÓMICOS\n";
+              informe = informe + "\nRESULTADOS ECONÓMICOS\n";
         informe = informe + "Recompensa anual: " + recompensaAnual + "\n";
         informe = informe + "Aporte al Fondo del Santuario (10%): " + aporte + "\n";
         informe = informe + "Impuesto del Reino de Atena: " + impuesto + "\n";
@@ -106,7 +99,6 @@ public class GestionRecompensas {
         return informe;
     }
 
-    // Comprueba que la recompensa sea válida (no negativa)
     private void validarRecompensa(double recompensaAnual) {
         if (recompensaAnual < 0) {
             throw new IllegalArgumentException(
