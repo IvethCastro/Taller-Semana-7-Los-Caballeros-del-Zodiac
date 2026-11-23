@@ -3,22 +3,19 @@ import java.util.ArrayList;
 
 public class Caballero {
 
-    // Atributos del caballero
     private int idCaballero;
     private String nombre;
     private String rango;
     private String constelacion;
     private int nivelPoder;
 
-    // Lista de misiones asignadas al caballero
+    
     private ArrayList<Mision> misiones;
 
-    // Constructor vacío
     public Caballero() {
         misiones = new ArrayList<>();
     }
 
-    // Constructor con datos personales
     public Caballero(int idCaballero, String nombre,
                      String rango, String constelacion,
                      int nivelPoder) {
@@ -32,7 +29,6 @@ public class Caballero {
         setNivelPoder(nivelPoder);
     }
 
-    // Constructor con datos personales y misiones
     public Caballero(int idCaballero, String nombre,
                      String rango, String constelacion,
                      int nivelPoder, ArrayList<Mision> misiones) {
@@ -41,7 +37,6 @@ public class Caballero {
         setMisiones(misiones);
     }
 
-    // Getter y Setter de ID
     public int getIdCaballero() {
         return idCaballero;
     }
@@ -56,7 +51,6 @@ public class Caballero {
         this.idCaballero = idCaballero;
     }
 
-    // Getter y Setter de nombre
     public String getNombre() {
         return nombre;
     }
@@ -71,8 +65,7 @@ public class Caballero {
         this.nombre = nombre.trim();
     }
 
-    // Getter y Setter de rango
-    public String getRango() {
+        public String getRango() {
         return rango;
     }
 
@@ -97,8 +90,7 @@ public class Caballero {
         this.rango = rangoValidado;
     }
 
-    // Getter y Setter de constelacion
-    public String getConstelacion() {
+      public String getConstelacion() {
         return constelacion;
     }
 
@@ -113,8 +105,7 @@ public class Caballero {
         this.constelacion = constelacion.trim();
     }
 
-    // Getter y Setter de nivelPoder
-    public int getNivelPoder() {
+       public int getNivelPoder() {
         return nivelPoder;
     }
 
@@ -128,13 +119,11 @@ public class Caballero {
         this.nivelPoder = nivelPoder;
     }
 
-    // Obtener las misiones
-    public ArrayList<Mision> getMisiones() {
+     public ArrayList<Mision> getMisiones() {
         return new ArrayList<>(misiones);
     }
 
-    // Establecer las misiones
-    public void setMisiones(ArrayList<Mision> misiones) {
+        public void setMisiones(ArrayList<Mision> misiones) {
         if (misiones == null) {
             throw new IllegalArgumentException(
                     "La lista de misiones no puede ser nula."
@@ -152,8 +141,7 @@ public class Caballero {
         this.misiones = new ArrayList<>(misiones);
     }
 
-    // Agregar una misión al caballero
-    public void agregarMision(Mision mision) {
+     public void agregarMision(Mision mision) {
         if (mision == null) {
             throw new IllegalArgumentException(
                     "La misión no puede ser nula."
@@ -163,8 +151,7 @@ public class Caballero {
         misiones.add(mision);
     }
 
-    // Mostrar la cantidad de misiones
-    public int getCantidadMisiones() {
+        public int getCantidadMisiones() {
         return misiones.size();
     }
 
