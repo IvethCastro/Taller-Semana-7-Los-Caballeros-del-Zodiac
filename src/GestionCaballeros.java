@@ -25,8 +25,6 @@ public class GestionCaballeros {
         return buscarCaballero(id) != null;
     }
 
-    // BÚSQUEDA ID
-
     public Caballero buscarCaballero(int id) {
         for (int i = 0; i < listaCaballeros.size(); i++) {
             Caballero c = listaCaballeros.get(i);   // get(i) es O(1)
@@ -38,8 +36,6 @@ public class GestionCaballeros {
 
         return null;
     }
-
-    // MODIFICACIÓN POR ID
 
     public boolean modificarCaballero(int id, String nombre, String rango, String constelacion, int nivelPoder) {
 
