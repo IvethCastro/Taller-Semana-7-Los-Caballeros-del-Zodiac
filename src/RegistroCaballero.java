@@ -2,8 +2,7 @@ import java.util.ArrayList;
 
 public class RegistroCaballero {
 
-    // Crear un caballero con sus datos personales
-    public Caballero crearCaballero(
+        public Caballero crearCaballero(
             int id,
             String nombre,
             String rango,
@@ -19,8 +18,7 @@ public class RegistroCaballero {
         );
     }
 
-    // Crear un caballero con sus datos y sus misiones
-    public Caballero crearCaballero(
+     public Caballero crearCaballero(
             int id,
             String nombre,
             String rango,
@@ -37,8 +35,6 @@ public class RegistroCaballero {
                 misiones
         );
     }
-
-    // Agregar una misión a un caballero
     public void registrarMision(
             Caballero caballero,
             String descripcion,
@@ -60,7 +56,6 @@ public class RegistroCaballero {
         caballero.agregarMision(nuevaMision);
     }
 
-    // Registrar el caballero en la colección general
     public boolean registrarCaballero(
             GestionCaballeros gestion,
             Caballero caballero) {
@@ -71,8 +66,6 @@ public class RegistroCaballero {
             );
         }
 
-        // La clase GestionCaballeros comprueba
-        // que el ID no esté duplicado y almacena el objeto.
         return gestion.registrarCaballero(caballero);
     }
 }
