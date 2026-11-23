@@ -5,7 +5,6 @@ public class GestionCaballeros {
     public GestionCaballeros() {
         listaCaballeros = new ArrayList<>();
     }
-    // REGISTRO
 
     public boolean registrarCaballero(Caballero caballero) {
         if (caballero == null) {
@@ -59,8 +58,6 @@ public class GestionCaballeros {
 
         return true;
     }
-
-    // LISTADO
 
     public ArrayList<Caballero> listarCaballeros() {
         return new ArrayList<>(listaCaballeros);
