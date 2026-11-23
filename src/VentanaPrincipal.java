@@ -34,7 +34,6 @@ public class VentanaPrincipal {
     private DefaultTableModel modelo;
 
     public VentanaPrincipal() {
-        // Rangos de los combos
         cmbRango.addItem("Bronce");
         cmbRango.addItem("Plata");
         cmbRango.addItem("Oro");
@@ -42,7 +41,7 @@ public class VentanaPrincipal {
         cmbModRango.addItem("Plata");
         cmbModRango.addItem("Oro");
 
-        // Columnas de la tabla
+       
         modelo = new DefaultTableModel(new String[]{"ID", "Nombre", "Rango", "Constelación", "Poder", "Misiones"}, 0);
         tablaCaballeros.setModel(modelo);
 
