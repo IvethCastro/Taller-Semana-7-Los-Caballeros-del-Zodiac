@@ -1,15 +1,11 @@
 public class Mision {
 
-    // Atributos
     private String descripcion;
     private int nivelDificultad;
     private double recompensaMision;
-
-    // Constructor vacío
     public Mision() {
     }
 
-    // Constructor con parámetros
     public Mision(String descripcion, int nivelDificultad,
                   double recompensaMision) {
 
@@ -18,8 +14,7 @@ public class Mision {
         setRecompensaMision(recompensaMision);
     }
 
-    // Getter y Setter de descripcion
-    public String getDescripcion() {
+       public String getDescripcion() {
         return descripcion;
     }
 
@@ -32,8 +27,6 @@ public class Mision {
 
         this.descripcion = descripcion.trim();
     }
-
-    // Getter y Setter de nivelDificultad
     public int getNivelDificultad() {
         return nivelDificultad;
     }
@@ -48,8 +41,7 @@ public class Mision {
         this.nivelDificultad = nivelDificultad;
     }
 
-    // Getter y Setter de recompensaMision
-    public double getRecompensaMision() {
+        public double getRecompensaMision() {
         return recompensaMision;
     }
 
@@ -64,8 +56,7 @@ public class Mision {
         this.recompensaMision = recompensaMision;
     }
 
-    // Mostrar información de la misión
-    @Override
+      @Override
     public String toString() {
         return "Descripción: " + descripcion
                 + "\nDificultad: " + nivelDificultad
